@@ -9,7 +9,7 @@ angular.module('webappApp', [
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/cam.html',
+        templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
       .otherwise({
