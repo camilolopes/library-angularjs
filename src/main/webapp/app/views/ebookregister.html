@@ -1,0 +1,66 @@
+<div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                           Cadastro de Livros
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <form role="form">
+                                        
+                                        <div class="form-group">
+                                            <label>Titulo</label>
+                                        <input class="form-control" ng-model="book.title" placeholder="Informe o titulo do livro">
+                                        </div>
+
+                                         <div class="form-group">
+                                            <label>Descrição Resumida</label>
+                                            <textarea class="form-control" rows="3" ng-model="book.description"></textarea>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>ISBN</label>
+                                        <input class="form-control" placeholder="Informe o ISBN livro" ng-model="book.isbn">
+                                        </div>
+                                        
+                                        <button type="submit" class="btn btn-success"
+                                         ng-controller="EbookregisterCtrl" ng-click="save()">Salvar</button>
+                                        <button type="reset" class="btn btn-default">Limpar</button>
+                                    </form>
+                                </div>
+
+                                <div class="col-lg-6">
+                                   <form>
+                                    <div class="form-group">
+                                            <label>Autor(es)</label>
+                                        <input class="form-control" placeholder="Camilo Lopes, Paulo Coelho" ng-model="book.authors">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Ano de publicação</label>
+                                        <input class="form-control" placeholder="2014" ng-model="book.yearPublished">
+                                        </div>                                       
+
+                                        <div class="form-group">
+                                            <label>Total de Páginas</label>
+                                        <input class="form-control" type="number" placeholder="500" ng-model="totalPages">
+                                        </div>
+
+                                         <div class="form-group">
+                                            <label>Capa Url</label>
+                                        <input class="form-control" type="url" placeholder="Informe a URL da capa" ng-model="book.coverUrl">
+                                        </div>
+                                    </form>
+                                </div>
+                                
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->

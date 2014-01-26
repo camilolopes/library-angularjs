@@ -12,6 +12,10 @@ angular.module('webappApp', [
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/ebookRegister', {
+        templateUrl: 'views/ebookregister.html',
+        controller: 'EbookregisterCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

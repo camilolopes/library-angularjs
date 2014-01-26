@@ -110,9 +110,7 @@
     		<version>3.2.0.RELEASE</version>
     	</dependency>
   </dependencies>
-  <build>
-    <finalName>agendacustomer</finalName>
-  </build>
+
   <artifactId>library-angularjs</artifactId>
   <organization>
   	<name>ITS</name>
