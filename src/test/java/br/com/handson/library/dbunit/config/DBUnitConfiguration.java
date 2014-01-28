@@ -26,7 +26,7 @@ public abstract class DBUnitConfiguration extends DatabaseTestCase {
 	@Autowired private SessionFactory sessionFactory;
 	private final String pathDataSet = "src/test/resources/";
 	//UPDATE HERE IF YOU CHANGE DATASET FILE NAME
-	private String nameDataSetXml = "its-dataset.xml";
+	private String nameDataSetXml = "library-dataset.xml";
 	private String dataSetXml;
 
 	public DBUnitConfiguration() {
