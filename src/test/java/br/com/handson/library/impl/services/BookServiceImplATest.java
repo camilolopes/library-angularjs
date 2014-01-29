@@ -36,12 +36,6 @@ public class BookServiceImplATest extends DBUnitConfiguration {
 		}
 	}
 	
-	@Test(expected=HibernateException.class)
-	public void testSaveBookCannotHaveDuplicatedTitle(){
-		Book book = getInstanceBook();
-		book.setTitle("TDD");
-		bookServiceImpl.save(book);
-	}
 
 	private Book getInstanceBook() {
 		Book bookAngularJS = new Book();

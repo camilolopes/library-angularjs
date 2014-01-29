@@ -1,6 +1,5 @@
 package br.com.handson.library.impl.services;
 
-import org.hibernate.HibernateException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -20,13 +19,5 @@ public class BookServiceImpl extends GenericServiceImpl<Book, BookDAO> implement
 		super.setDao(dao);
 	}
 
-	@Override
-	public void save(Book entity) {
-		String titleBook=entity.getTitle();
-		Book book= getDao().searchbook(titleBook);
-		if(book!=null){
-			throw new HibernateException("Title already exists");
-		}
-		getDao().saveOrUpdate(book);
-	}
+
 }
