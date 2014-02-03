@@ -64,4 +64,40 @@
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
-            
+
+            <!--table-->
+
+            <div>
+                
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                          Livros Cadastrados
+                        </div>
+                        <div class="panel-body">
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                    
+                                    <th>Titulo</th>
+                                    <th>Ano</th>
+                                    <th>ISBN</th>
+                                    <th>Autor(es)</th>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="book in listBooks">
+                                        <td>{{book.title}}</td>
+                                        <td>{{book.yearPublished}}</td>
+                                        <td>{{book.isbn}}</td>
+                                        <td>{{book.author}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                                
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
