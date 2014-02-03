@@ -1,6 +1,4 @@
 package br.com.handson.library.impl.services;
-import org.hibernate.Hibernate;
-import org.hibernate.HibernateException;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

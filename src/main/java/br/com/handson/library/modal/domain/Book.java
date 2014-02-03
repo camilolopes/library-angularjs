@@ -2,18 +2,15 @@ package br.com.handson.library.modal.domain;
 
 // Generated 27/01/2014 16:51:51 by Hibernate Tools 3.4.0.CR1
 
+import static javax.persistence.GenerationType.IDENTITY;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
-import javax.persistence.UniqueConstraint;
-
-import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import com.sun.istack.NotNull;
 
 import br.com.handson.library.enums.StatusBookEnum;
 
@@ -33,7 +30,7 @@ public class Book implements java.io.Serializable {
 	@Column(name = "TITLE", length = 100,unique=true)
 	private String title;
 	
-	@Column(name = "DESCRIPTION", length = 65535)
+	@Column(name = "DESCRIPTION")
 	private String description;
 	
 	@Column(name = "AUTHOR", length = 100)
@@ -52,7 +49,7 @@ public class Book implements java.io.Serializable {
 	@Column(name = "YEAR_PUBLISHED", length = 45)
 	private String yearPublished;
 	
-	@Column(name = "COVER_URL", length = 65535)
+	@Column(name = "COVER_URL")
 	private String coverUrl;
 
 	public Book() {

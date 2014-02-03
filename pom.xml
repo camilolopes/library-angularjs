@@ -5,6 +5,7 @@
   <packaging>war</packaging>
   <version>1.0.0</version>
   <name>Library AngularJS</name>
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>

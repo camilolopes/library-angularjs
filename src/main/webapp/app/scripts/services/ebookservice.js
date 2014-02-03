@@ -1,16 +1,16 @@
 'use strict';
 
 angular.module('webappApp')
-  .factory('ebookService', function () {
-    // Service logic
-    // ...
-
-    var meaningOfLife = 42;
-
-    // Public API here
-    return {
-      someMethod: function () {
-        return meaningOfLife;
+  .factory('ebookService', function ($resource) {
+    
+    return $resource('../rest/book',{},{
+      list: {
+        method:'GET',
+        isArray:true
+      },
+      save:{
+        method:'POST'
       }
-    };
+     
+    });
   });

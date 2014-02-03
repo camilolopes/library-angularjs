@@ -14,10 +14,7 @@ import br.com.handson.library.interfaces.dao.GenericDAO;
 @SuppressWarnings("unchecked")
 public abstract class GenericHibernateDAO<T> implements GenericDAO<T> {
 
-	/*
-	 * Esse cara é a entidade que passarmos quando extends 
-	 * a classe GenericHibernateDAO, observe que ele é bem generico. 
-	 */
+
 	private Class<T> persistentClass;
 
 	@Autowired
