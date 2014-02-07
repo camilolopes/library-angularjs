@@ -34,6 +34,13 @@ public class BookServiceImplATest extends DBUnitConfiguration {
 		}
 	}
 	
+	@Test
+	public void testGetBookById(){
+		int id=1;
+		Book book = bookServiceImpl.getById(id);
+		assertNotNull(book);
+	}
+	
 
 	private Book getInstanceBook() {
 		Book bookAngularJS = new Book();

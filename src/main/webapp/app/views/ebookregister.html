@@ -76,7 +76,8 @@
                         <div class="panel-body">
                             <table class="table table-bordered table-striped">
                                 <thead>
-                                    
+                                    <th>Excluir</th>
+                                    <th>Editar</th>
                                     <th>Titulo</th>
                                     <th>Ano</th>
                                     <th>ISBN</th>
@@ -84,6 +85,20 @@
                                 </thead>
                                 <tbody>
                                     <tr ng-repeat="book in listBooks">
+                                        <td>
+                                            <a href ng-click="remove(book)" title="remover">
+                                                <div class="btn">
+                                                        <span class="glyphicon glyphicon-remove"></span>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a  href ng-click="edit(book)" title="editar">
+                                                   <div class="btn">
+                                                        <span class="glyphicon glyphicon-edit"></span
+                                                   </div> 
+                                            </a>
+                                        </td>
                                         <td>{{book.title}}</td>
                                         <td>{{book.yearPublished}}</td>
                                         <td>{{book.isbn}}</td>

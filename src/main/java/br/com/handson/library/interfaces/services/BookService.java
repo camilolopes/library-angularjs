@@ -4,4 +4,6 @@ import br.com.handson.library.modal.domain.Book;
 
 public interface BookService extends GenericService<Book> {
 
+	Book getById(int id);
+
 }

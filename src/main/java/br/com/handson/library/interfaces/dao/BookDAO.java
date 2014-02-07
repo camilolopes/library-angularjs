@@ -4,5 +4,7 @@ import br.com.handson.library.modal.domain.Book;
 
 public interface BookDAO extends GenericDAO<Book> {
 
+	Book getById(int id);
+
 
 }

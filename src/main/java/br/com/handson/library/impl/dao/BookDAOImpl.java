@@ -11,5 +11,10 @@ public class BookDAOImpl extends GenericHibernateDAO<Book> implements BookDAO {
 		super(Book.class);		
 	}
 
+	public Book getById(int id) {
+			Book book = (Book) getCurrentSession().get(Book.class, id);
+		return book;
+	}
+
 	
 }
