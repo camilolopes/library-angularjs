@@ -1,1 +1,6 @@
-Dashboard principal
+<div class="row">
+	<div class="col-sm-6 col-md-3" ng-repeat="book in listBooks">
+		<img ng-src="{{book.coverUrl}}" width="143" height="202"/>
+		<div><b>{{book.title}}</b></div>
+	</div>
+</div>

@@ -10,7 +10,7 @@ angular.module('webappApp', [
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        controller: 'EbookregisterCtrl'
       })
       .when('/ebookRegister', {
         templateUrl: 'views/ebookregister.html',
