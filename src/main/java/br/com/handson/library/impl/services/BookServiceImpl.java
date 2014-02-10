@@ -1,5 +1,7 @@
 package br.com.handson.library.impl.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -25,6 +27,10 @@ public class BookServiceImpl extends GenericServiceImpl<Book, BookDAO> implement
 		
 		return getDao().getById(id);
 	}
+	public List<Book> search(String description) {
+			
+		return getDao().searchBook(description);
+	}
 
-
+	
 }
