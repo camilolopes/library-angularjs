@@ -27,6 +27,7 @@ public class BookServiceImpl extends GenericServiceImpl<Book, BookDAO> implement
 		
 		return getDao().getById(id);
 	}
+	@Transactional(propagation=Propagation.REQUIRED,readOnly=true)
 	public List<Book> search(String description) {
 			
 		return getDao().searchBook(description);

@@ -54,6 +54,14 @@ public class BookController {
 		
 	}
 	
+	@Path("/search/{description}")
+	@Produces(MediaType.APPLICATION_JSON)
+	@GET
+	public List<Book> search(@PathParam("description")String description){
+
+	return bookServiceImpl.search(description);
+	}
+	
 	public BookService getBookServiceImpl() {
 		return bookServiceImpl;
 	}
