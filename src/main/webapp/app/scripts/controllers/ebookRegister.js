@@ -1,10 +1,15 @@
 'use strict';
 
 angular.module('webappApp')
-  .controller('EbookregisterCtrl',['$scope','ebookService', function ($scope,ebookService) {
+  .controller('EbookregisterCtrl',['$scope','$location', 'ebookService', 'searchBookService','$rootScope',
+    function ($scope,$location,ebookService,searchBookService,$rootScope) {
     
     $scope.book = new ebookService();
     $scope.listBooks = ebookService.list();
+    $rootScope.listBook;
+    $scope.searchBookService = new searchBookService();
+    
+
     $scope.save = function(){	
     	$scope.book.$save(function(){
     		$scope.book = new ebookService();
@@ -25,4 +30,13 @@ angular.module('webappApp')
         $scope.listBooks = ebookService.list();
         })
     }
-  }]);
+    $scope.search = function(value){
+        searchBookService.searchBook({description:value},
+       function(data){
+        $rootScope.listBook = angular.copy(data);   
+        $location.path("/resultsearch")     
+        });       
+   }
+    
+    }
+  ]);

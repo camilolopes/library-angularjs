@@ -12,6 +12,11 @@ angular.module('webappApp', [
         templateUrl: 'views/main.html',
         controller: 'EbookregisterCtrl'
       })
+      .when('/resultsearch', {
+        templateUrl: 'views/resultsearch.html',
+        controller: 'EbookregisterCtrl'
+        
+      })
       .when('/ebookRegister', {
         templateUrl: 'views/ebookregister.html',
         controller: 'EbookregisterCtrl'

@@ -23,6 +23,15 @@
                                             <label>ISBN</label>
                                         <input class="form-control" placeholder="Informe o ISBN livro" ng-model="book.isbn">
                                         </div>
+
+                                        <div class="form-group">
+                                                <label>Status</label>
+                                                <select ng-model="book.status" required>
+                                                    <option value="">Selecione</option>
+                                                    <option value="PUBLISHED" ng-selected="book.status=='PUBLISHED'">Ativo</option>
+                                                    <option value="DRAFT" ng-selected="book.status=='DRAFT'">Inativo</option>
+                                                </select>
+                                        </div>
                                         
                                         <button type="submit" class="btn btn-success"
                                          ng-click="save()" ng-disabled="bookform.$invalid">Salvar</button>
@@ -82,6 +91,7 @@
                                     <th>Ano</th>
                                     <th>ISBN</th>
                                     <th>Autor(es)</th>
+                                    <th>Status</th>
                                 </thead>
                                 <tbody>
                                     <tr ng-repeat="book in listBooks">
@@ -103,6 +113,7 @@
                                         <td>{{book.yearPublished}}</td>
                                         <td>{{book.isbn}}</td>
                                         <td>{{book.author}}</td>
+                                        <td>{{book.status}}</td>
                                     </tr>
                                 </tbody>
                             </table>
