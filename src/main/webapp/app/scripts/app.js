@@ -14,8 +14,7 @@ angular.module('webappApp', [
       })
       .when('/resultsearch', {
         templateUrl: 'views/resultsearch.html',
-        controller: 'EbookregisterCtrl'
-        
+        controller: 'EbookregisterCtrl'        
       })
       .when('/ebookRegister', {
         templateUrl: 'views/ebookregister.html',
